@@ -1,0 +1,544 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1389927D12CB0FB23E10FA23 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECC5DCA45F290A3E0F46900 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5F9FC5C11B4CCDD700DD828C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9FC5C01B4CCDD700DD828C /* main.m */; };
+		5F9FC5C41B4CCDD700DD828C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9FC5C31B4CCDD700DD828C /* AppDelegate.m */; };
+		5F9FC5C71B4CCDD700DD828C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9FC5C61B4CCDD700DD828C /* ViewController.m */; };
+		5F9FC5CA1B4CCDD700DD828C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F9FC5C81B4CCDD700DD828C /* Main.storyboard */; };
+		5F9FC5CC1B4CCDD700DD828C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F9FC5CB1B4CCDD700DD828C /* Images.xcassets */; };
+		5F9FC5CF1B4CCDD700DD828C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5F9FC5CD1B4CCDD700DD828C /* LaunchScreen.xib */; };
+		5F9FC5DB1B4CCDD700DD828C /* LyftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9FC5DA1B4CCDD700DD828C /* LyftTests.m */; };
+		5F9FC5E61B4CD3D300DD828C /* LFLocationTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9FC5E51B4CD3D300DD828C /* LFLocationTracker.m */; };
+		5F9FC5EA1B4CD7F800DD828C /* LFLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9FC5E91B4CD7F800DD828C /* LFLocation.m */; };
+		5F9FC5ED1B4CDA6200DD828C /* LFTrip.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F9FC5EC1B4CDA6200DD828C /* LFTrip.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F9FC5D51B4CCDD700DD828C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F9FC5B31B4CCDD700DD828C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F9FC5BA1B4CCDD700DD828C;
+			remoteInfo = Lyft;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3ECC5DCA45F290A3E0F46900 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F9FC5BB1B4CCDD700DD828C /* Lyft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lyft.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F9FC5BF1B4CCDD700DD828C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F9FC5C01B4CCDD700DD828C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5F9FC5C21B4CCDD700DD828C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5F9FC5C31B4CCDD700DD828C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5F9FC5C51B4CCDD700DD828C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5F9FC5C61B4CCDD700DD828C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5F9FC5C91B4CCDD700DD828C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5F9FC5CB1B4CCDD700DD828C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5F9FC5CE1B4CCDD700DD828C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		5F9FC5D41B4CCDD700DD828C /* LyftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LyftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F9FC5D91B4CCDD700DD828C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F9FC5DA1B4CCDD700DD828C /* LyftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyftTests.m; sourceTree = "<group>"; };
+		5F9FC5E41B4CD3D300DD828C /* LFLocationTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLocationTracker.h; sourceTree = "<group>"; };
+		5F9FC5E51B4CD3D300DD828C /* LFLocationTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLocationTracker.m; sourceTree = "<group>"; };
+		5F9FC5E81B4CD7F800DD828C /* LFLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFLocation.h; sourceTree = "<group>"; };
+		5F9FC5E91B4CD7F800DD828C /* LFLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFLocation.m; sourceTree = "<group>"; };
+		5F9FC5EB1B4CDA6200DD828C /* LFTrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFTrip.h; sourceTree = "<group>"; };
+		5F9FC5EC1B4CDA6200DD828C /* LFTrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFTrip.m; sourceTree = "<group>"; };
+		847370EB5F5DE29CB123071E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D9634DFEF6AA7D115228F612 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F9FC5B81B4CCDD700DD828C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1389927D12CB0FB23E10FA23 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F9FC5D11B4CCDD700DD828C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		486F41484663B4B2C5751444 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				847370EB5F5DE29CB123071E /* Pods.debug.xcconfig */,
+				D9634DFEF6AA7D115228F612 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4A99DA21C01E3F02AA8DA5C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3ECC5DCA45F290A3E0F46900 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5F9FC5B21B4CCDD700DD828C = {
+			isa = PBXGroup;
+			children = (
+				5F9FC5BD1B4CCDD700DD828C /* Lyft */,
+				5F9FC5D71B4CCDD700DD828C /* LyftTests */,
+				5F9FC5BC1B4CCDD700DD828C /* Products */,
+				486F41484663B4B2C5751444 /* Pods */,
+				4A99DA21C01E3F02AA8DA5C9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5F9FC5BC1B4CCDD700DD828C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F9FC5BB1B4CCDD700DD828C /* Lyft.app */,
+				5F9FC5D41B4CCDD700DD828C /* LyftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F9FC5BD1B4CCDD700DD828C /* Lyft */ = {
+			isa = PBXGroup;
+			children = (
+				5F9FC5E71B4CD68700DD828C /* Location */,
+				5F9FC5C21B4CCDD700DD828C /* AppDelegate.h */,
+				5F9FC5C31B4CCDD700DD828C /* AppDelegate.m */,
+				5F9FC5C51B4CCDD700DD828C /* ViewController.h */,
+				5F9FC5C61B4CCDD700DD828C /* ViewController.m */,
+				5F9FC5C81B4CCDD700DD828C /* Main.storyboard */,
+				5F9FC5CB1B4CCDD700DD828C /* Images.xcassets */,
+				5F9FC5CD1B4CCDD700DD828C /* LaunchScreen.xib */,
+				5F9FC5BE1B4CCDD700DD828C /* Supporting Files */,
+			);
+			path = Lyft;
+			sourceTree = "<group>";
+		};
+		5F9FC5BE1B4CCDD700DD828C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F9FC5BF1B4CCDD700DD828C /* Info.plist */,
+				5F9FC5C01B4CCDD700DD828C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F9FC5D71B4CCDD700DD828C /* LyftTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F9FC5DA1B4CCDD700DD828C /* LyftTests.m */,
+				5F9FC5D81B4CCDD700DD828C /* Supporting Files */,
+			);
+			path = LyftTests;
+			sourceTree = "<group>";
+		};
+		5F9FC5D81B4CCDD700DD828C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5F9FC5D91B4CCDD700DD828C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5F9FC5E71B4CD68700DD828C /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				5F9FC5E41B4CD3D300DD828C /* LFLocationTracker.h */,
+				5F9FC5E51B4CD3D300DD828C /* LFLocationTracker.m */,
+				5F9FC5E81B4CD7F800DD828C /* LFLocation.h */,
+				5F9FC5E91B4CD7F800DD828C /* LFLocation.m */,
+				5F9FC5EB1B4CDA6200DD828C /* LFTrip.h */,
+				5F9FC5EC1B4CDA6200DD828C /* LFTrip.m */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F9FC5BA1B4CCDD700DD828C /* Lyft */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F9FC5DE1B4CCDD700DD828C /* Build configuration list for PBXNativeTarget "Lyft" */;
+			buildPhases = (
+				3B81D7FAFB2708317BF1A633 /* Check Pods Manifest.lock */,
+				5F9FC5B71B4CCDD700DD828C /* Sources */,
+				5F9FC5B81B4CCDD700DD828C /* Frameworks */,
+				5F9FC5B91B4CCDD700DD828C /* Resources */,
+				9DB15AD1882E26D0B245AD6B /* Copy Pods Resources */,
+				0295EB27CA844CC99A2DCD3D /* Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lyft;
+			productName = Lyft;
+			productReference = 5F9FC5BB1B4CCDD700DD828C /* Lyft.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5F9FC5D31B4CCDD700DD828C /* LyftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F9FC5E11B4CCDD700DD828C /* Build configuration list for PBXNativeTarget "LyftTests" */;
+			buildPhases = (
+				5F9FC5D01B4CCDD700DD828C /* Sources */,
+				5F9FC5D11B4CCDD700DD828C /* Frameworks */,
+				5F9FC5D21B4CCDD700DD828C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F9FC5D61B4CCDD700DD828C /* PBXTargetDependency */,
+			);
+			name = LyftTests;
+			productName = LyftTests;
+			productReference = 5F9FC5D41B4CCDD700DD828C /* LyftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F9FC5B31B4CCDD700DD828C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LF;
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = toddanderson;
+				TargetAttributes = {
+					5F9FC5BA1B4CCDD700DD828C = {
+						CreatedOnToolsVersion = 6.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					5F9FC5D31B4CCDD700DD828C = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 5F9FC5BA1B4CCDD700DD828C;
+					};
+				};
+			};
+			buildConfigurationList = 5F9FC5B61B4CCDD700DD828C /* Build configuration list for PBXProject "Lyft" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5F9FC5B21B4CCDD700DD828C;
+			productRefGroup = 5F9FC5BC1B4CCDD700DD828C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F9FC5BA1B4CCDD700DD828C /* Lyft */,
+				5F9FC5D31B4CCDD700DD828C /* LyftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F9FC5B91B4CCDD700DD828C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F9FC5CA1B4CCDD700DD828C /* Main.storyboard in Resources */,
+				5F9FC5CF1B4CCDD700DD828C /* LaunchScreen.xib in Resources */,
+				5F9FC5CC1B4CCDD700DD828C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F9FC5D21B4CCDD700DD828C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0295EB27CA844CC99A2DCD3D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B81D7FAFB2708317BF1A633 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9DB15AD1882E26D0B245AD6B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F9FC5B71B4CCDD700DD828C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F9FC5C71B4CCDD700DD828C /* ViewController.m in Sources */,
+				5F9FC5E61B4CD3D300DD828C /* LFLocationTracker.m in Sources */,
+				5F9FC5C41B4CCDD700DD828C /* AppDelegate.m in Sources */,
+				5F9FC5EA1B4CD7F800DD828C /* LFLocation.m in Sources */,
+				5F9FC5ED1B4CDA6200DD828C /* LFTrip.m in Sources */,
+				5F9FC5C11B4CCDD700DD828C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F9FC5D01B4CCDD700DD828C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F9FC5DB1B4CCDD700DD828C /* LyftTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F9FC5D61B4CCDD700DD828C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F9FC5BA1B4CCDD700DD828C /* Lyft */;
+			targetProxy = 5F9FC5D51B4CCDD700DD828C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5F9FC5C81B4CCDD700DD828C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F9FC5C91B4CCDD700DD828C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5F9FC5CD1B4CCDD700DD828C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5F9FC5CE1B4CCDD700DD828C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5F9FC5DC1B4CCDD700DD828C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F9FC5DD1B4CCDD700DD828C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F9FC5DF1B4CCDD700DD828C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 847370EB5F5DE29CB123071E /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Lyft/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5F9FC5E01B4CCDD700DD828C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9634DFEF6AA7D115228F612 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Lyft/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5F9FC5E21B4CCDD700DD828C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LyftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lyft.app/Lyft";
+			};
+			name = Debug;
+		};
+		5F9FC5E31B4CCDD700DD828C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LyftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lyft.app/Lyft";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F9FC5B61B4CCDD700DD828C /* Build configuration list for PBXProject "Lyft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F9FC5DC1B4CCDD700DD828C /* Debug */,
+				5F9FC5DD1B4CCDD700DD828C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F9FC5DE1B4CCDD700DD828C /* Build configuration list for PBXNativeTarget "Lyft" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F9FC5DF1B4CCDD700DD828C /* Debug */,
+				5F9FC5E01B4CCDD700DD828C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F9FC5E11B4CCDD700DD828C /* Build configuration list for PBXNativeTarget "LyftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F9FC5E21B4CCDD700DD828C /* Debug */,
+				5F9FC5E31B4CCDD700DD828C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F9FC5B31B4CCDD700DD828C /* Project object */;
+}

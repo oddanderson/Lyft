@@ -1,0 +1,40 @@
+PODS:
+  - CLLocationManager-blocks (1.3.2)
+  - OMGHTTPURLRQ (2.1.3):
+    - OMGHTTPURLRQ/RQ (= 2.1.3)
+  - OMGHTTPURLRQ/FormURLEncode (2.1.3)
+  - OMGHTTPURLRQ/RQ (2.1.3):
+    - OMGHTTPURLRQ/FormURLEncode
+    - OMGHTTPURLRQ/UserAgent
+  - OMGHTTPURLRQ/UserAgent (2.1.3)
+  - PromiseKit (2.1.0):
+    - PromiseKit/Foundation (= 2.1.0)
+    - PromiseKit/QuartzCore (= 2.1.0)
+    - PromiseKit/UIKit (= 2.1.0)
+  - PromiseKit/CoreLocation (2.1.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (2.1.0)
+  - PromiseKit/Foundation (2.1.0):
+    - OMGHTTPURLRQ (~> 2.1.3)
+    - PromiseKit/CorePromise
+  - PromiseKit/QuartzCore (2.1.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (2.1.0):
+    - PromiseKit/CorePromise
+  - Realm (0.93.2):
+    - Realm/Headers (= 0.93.2)
+  - Realm/Headers (0.93.2)
+
+DEPENDENCIES:
+  - CLLocationManager-blocks
+  - PromiseKit
+  - PromiseKit/CoreLocation
+  - Realm
+
+SPEC CHECKSUMS:
+  CLLocationManager-blocks: 3b0af033092491fcd3cd24ffddfeb13f65e52144
+  OMGHTTPURLRQ: c4268dea4295b585d711055dbcd87bfa82badd5f
+  PromiseKit: 6e9fae221f0bcf83fee53b611168cfb557f472d1
+  Realm: 2fdd0ae74f730e190384e0338d8a0d3654df8220
+
+COCOAPODS: 0.37.2
