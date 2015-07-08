@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Realm/Realm.h>
-@class PMKPromise;
 
 @interface LFLocation : RLMObject
 
@@ -17,7 +16,8 @@
 @property NSDate *timestamp;
 @property CGFloat speed;
 @property NSString *address;
+@property NSString *uniqueId;
 
-- (PMKPromise *)displayAddress;
+@property (nonatomic, readonly) NSString *displayTime;
 
 @end

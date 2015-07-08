@@ -14,6 +14,7 @@
 @interface LFLocationTracker ()
 
 @property (nonatomic) CLLocationManager *manager;
+@property (nonatomic) RLMNotificationToken *notification;
 
 @end
 
@@ -55,6 +56,7 @@
         data.longitude = coordinate.longitude;
         data.speed = location.speed;
         data.timestamp = location.timestamp;
+        data.uniqueId = [NSString stringWithFormat:@"%lu-%d", (unsigned long)location.timestamp.hash, arc4random_uniform(50000000)];
         NSString *documentsDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0];
         NSString *customRealmPath = [documentsDirectory stringByAppendingPathComponent:@"locations.realm"];
 

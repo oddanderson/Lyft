@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import <Realm/Realm.h>
 @class LFLocation;
+@class PMKPromise;
 
 @interface LFTrip : RLMObject
 
 @property LFLocation *startLocation;
 @property LFLocation *endLocation;
+@property NSDate *timestamp;
+
+@property (nonatomic, readonly) NSString *tripDuration;
 
 @end
 

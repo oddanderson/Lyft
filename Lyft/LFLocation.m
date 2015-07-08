@@ -7,19 +7,15 @@
 //
 
 #import "LFLocation.h"
-#import <PromiseKit/PromiseKit.h>
-#import <CoreLocation/CoreLocation.h>
 
 @implementation LFLocation
 
-static CLGeocoder *Geocoder;
-static NSMutableArray *CurrentRequests;
-static id queue;
+static NSDateFormatter *Formatter;
 
 + (void)initialize {
-    Geocoder = [[CLGeocoder alloc] init];
-    CurrentRequests = [NSMutableArray array];
-    queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    Formatter = [NSDateFormatter new];
+    [Formatter setDateStyle:NSDateFormatterNoStyle];
+    [Formatter setTimeStyle:NSDateFormatterShortStyle];
 }
 
 + (NSDictionary *)defaultPropertyValues {
@@ -30,18 +26,8 @@ static id queue;
     return @[@"timestamp"];
 }
 
-- (PMKPromise *)displayAddress {
-    if (self.address.length) {
-        return [PMKPromise promiseWithValue:self.address];
-    }
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:self.latitude longitude:self.longitude];
-    return [Geocoder reverseGeocode:location].then(^id(CLPlacemark *first, NSArray *allPlacements) {
-        RLMRealm *realm = [RLMRealm defaultRealm];
-        [realm beginWriteTransaction];
-        self.address = first.name;
-        [realm commitWriteTransaction];
-        return first.name;
-    });
+- (NSString *)displayTime {
+    return [Formatter stringFromDate:self.timestamp];
 }
 
 @end
