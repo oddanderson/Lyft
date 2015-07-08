@@ -19,7 +19,7 @@
 @property (nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) RLMResults *array;
 @property (nonatomic, strong) RLMNotificationToken *notification;
-@property (nonatomic) UIBarButtonItem *trackingItem;
+@property (nonatomic) IBOutlet UISwitch *loggingSwitch;
 
 @end
 
@@ -33,18 +33,18 @@ static CLGeocoder *Geocoder;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.array = [[LFTrip allObjects] sortedResultsUsingProperty:@"timestamp" ascending:YES];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"NavBar"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:252/255.0 green:251/255.0 blue:248/255.0 alpha:1]];
+    self.array = [[LFTrip allObjects] sortedResultsUsingProperty:@"timestamp" ascending:NO];
     __weak typeof(self) weakSelf = self;
     self.notification = [RLMRealm.defaultRealm addNotificationBlock:^(NSString *note, RLMRealm *realm) {
         [weakSelf.tableView reloadData];
     }];
     self.tableView.tableFooterView = [UIView new];
-    self.trackingItem = [[UIBarButtonItem alloc] initWithTitle:@"Logging Enabled" style:UIBarButtonItemStylePlain target:self action:@selector(toggleLogging)];
-    self.navigationItem.rightBarButtonItem = self.trackingItem;
     [self updateLoggingItem];
 }
 
-- (void)toggleLogging {
+- (IBAction)toggleLogging:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     BOOL loggingDisabled = [defaults boolForKey:@"loggingDisabled"];
     loggingDisabled = !loggingDisabled;
@@ -55,12 +55,11 @@ static CLGeocoder *Geocoder;
     } else {
         [[LFLocationTracker sharedTracker] startTracking];
     }
-    [self updateLoggingItem];
 }
 
 - (void)updateLoggingItem {
     BOOL loggingDisabled = [[NSUserDefaults standardUserDefaults] boolForKey:@"loggingDisabled"];
-    self.trackingItem.title = loggingDisabled ? @"Logging Disabled" : @"Logging Enabled";
+    [self.loggingSwitch setOn:!loggingDisabled];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -71,6 +70,10 @@ static CLGeocoder *Geocoder;
     return self.array.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 60;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *Identifier = @"Cell";
@@ -79,18 +82,23 @@ static CLGeocoder *Geocoder;
     LFTrip *trip = self.array[indexPath.row];
     NSString *startAddress = trip.startLocation.address;
     if (!startAddress.length) {
+        startAddress = @"calculating";
         [self promiseForLocation:trip.startLocation];
     }
     NSString *endAddress = trip.endLocation.address;
     if (!endAddress.length) {
+        endAddress = @"calculating";
         [self promiseForLocation:trip.endLocation];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ > %@", startAddress, endAddress];
+    UILabel *primeLabel = (id)[cell viewWithTag:2];
+    primeLabel.text = [NSString stringWithFormat:@"%@ > %@", startAddress, endAddress];
     NSString *detailText = [NSString stringWithFormat:@"%@ - %@ (%@)",
                             trip.startLocation.displayTime,
                             trip.endLocation.displayTime,
                             trip.tripDuration];
-    cell.detailTextLabel.text = detailText;
+    UILabel *secondLabel = (id)[cell viewWithTag:3];
+    secondLabel.font = [UIFont italicSystemFontOfSize:12];
+    secondLabel.text = detailText;
     
     return cell;
 }

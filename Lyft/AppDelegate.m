@@ -22,6 +22,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
     UIAlertView * alert;
+    [RLMRealm setSchemaVersion:1
+                forRealmAtPath:[RLMRealm defaultRealmPath]
+            withMigrationBlock:^(RLMMigration *migration, uint64_t oldSchemaVersion) {
+                // We haven’t migrated anything yet, so oldSchemaVersion == 0
+                if (oldSchemaVersion < 1) {
+                    // Nothing to do!
+                    // Realm will automatically detect new properties and removed properties
+                    // And will update the schema on disk automatically
+                }
+            }];
     
     //We have to make sure that the Background App Refresh is enable for the Location updates to work in the background.
     if ([[UIApplication sharedApplication] backgroundRefreshStatus] == UIBackgroundRefreshStatusDenied) {
